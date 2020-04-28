@@ -9,11 +9,11 @@ const quiz = function() {
   if (response == "yes") {
     // trying to link to quiz.html page where we will start to pose q's
     const startQuiz = function() {
-      // start to fill this out ig
+      window.onsubmit("quiz.html")
     }
   }
   else if (response == "no") {
-    window.reload("index.html")
+    window.onsubmit("index.html")
   }
   else if (response == null) {
     // on purpose
