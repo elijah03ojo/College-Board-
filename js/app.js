@@ -8,10 +8,8 @@ const quiz = function() {
   response = response.toLowerCase;
   if (response == "yes") {
     // trying to link to quiz.html page where we will start to pose q's
-    const startQuiz = function() {
-      window.onsubmit("quiz.html")
+    button.innerhtml = "href = quiz.html"
     }
-  }
   else if (response == "no") {
     window.onsubmit("index.html")
   }
