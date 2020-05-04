@@ -200,6 +200,7 @@ let questions = [
   ]
 
   const quizquestions = [  // im trying to get this function to choose a random one and print those quiz questions
+                          // but it still needs to get linked to the above array and only thr question
     [0, 1, 2, 3, 4]
     [9, 10, 11, 12, 13]
     [5, 6, 7, 8, 9]
@@ -214,4 +215,10 @@ let questions = [
   ]
 
   for (let i = 0; i >= 0, i++) {
+    if (i = 0) {
+      var quizzies = quizquestions[0]
+      // something to make them appear on html
+      //
+    }
+
   }
