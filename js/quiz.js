@@ -1,8 +1,7 @@
 /* Features in quiz
 1. Timing = points
-2. Multiple choice 4 options points if right no points if wrong
-3. Scoreboard
-4. 25 questions but only 10 appear?
+2. Multiple choice 3 options points if right no points if wrong
+3. 25 questions but only 10 appear?
 */
 
 const quiz = document.getElementById("quiz");
@@ -199,3 +198,20 @@ let questions = [
         },
 // can add more later, lets finish the js and get the quiz running
   ]
+
+  const quizquestions = [  // im trying to get this function to choose a random one and print those quiz questions
+    [0, 1, 2, 3, 4]
+    [9, 10, 11, 12, 13]
+    [5, 6, 7, 8, 9]
+    [18, 17, 16, 15, 14]
+    [0, 18, 1, 17, 2]
+    [5, 8, 13, 16, 1]
+    [1, 5, 9, 13, 14]
+    [16, 0, 7, 4, 2]
+    [15, 11, 12, 10, 14]
+    [3, 6, 9, 12, 15]
+// can add more later, lets finish js and get quiz running
+  ]
+
+  for (let i = 0; i >= 0, i++) {
+  }
