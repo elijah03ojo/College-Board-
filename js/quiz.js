@@ -38,10 +38,10 @@ let questions = [
       {
         question : "What taxes do you pay after gross income?",
         imgSrc  : // "put image here"
-        choiceA : "FICA",
+        choiceA : "Citizen Tax",
         choiceB : "Gas Tax",
-        choiceC : "Citizen Tax",
-        correct : "A"
+        choiceC : "FICA",
+        correct : "C"
       },
 
       {
@@ -56,10 +56,10 @@ let questions = [
       {
         question : "How much is the FICA tax?",
         imgSrc  : // "put image here"
-        choiceA : "7.65%",
-        choiceB : "9.58%",
+        choiceA : "9.58%",
+        choiceB : "7.65%",
         choiceC : "6.2%",
-        correct : "A"
+        correct : "B"
       },
 
       {
@@ -83,10 +83,10 @@ let questions = [
       {
         question : "What is FICA tax?",
         imgSrc  : // "put image here"
-        choiceA : "Social Security and Medicare",
+        choiceA : "Federal Income Charge Association tax",
         choiceB : "Federal Income Tax",
-        choiceC : "Federal Income Charge Associaton Tax",
-        correct : "A"
+        choiceC : "Social Security and Medicare",
+        correct : "C"
       },
 
       {
