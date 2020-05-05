@@ -32,7 +32,7 @@ let questions = [
         choiceA : "Apple",
         choiceB : "Amazon",
         choiceC : "Microsoft",
-        correct : "A"                 //We must make choice A the correct answer <--  why?????????? //
+        correct : "A"                 //We must make choice A the correct answer <--  why??????????  I was only saying that for the first question...not all of them.//
       },
 
       {
