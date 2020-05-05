@@ -198,7 +198,62 @@ let questions = [
         },
 // can add more later, lets finish the js and get the quiz running
   ]
+let lastQuestionIndex = questions.length-1;   array.length -> 4   array[3] -> d
+let runningQuestionIndex = 0;
 
+function renderQuestion(){                                      runningQuestionIndex = 0;
+    let q = questions[runningQuestionIndex];                    renderQuestion()
+qImg.innerHTML = "<img src=" + q.imgSrc + ">";
+question.innerHTML = "<p>" + q.question + "</p>";               runningQuestionIndex++
+choiceA.innterHTML = q.choiceA;
+choiceB.innterHTML = q.choiceB;
+choiceC.innterHTML = q.choiceC;
+}
+
+
+function progressRender(){
+      for(let qIndex = 0; qIndex <= lastQuestionIndex; qIndex++){
+          progress.innerHTML += "<div class='prog'id=" + qIndex + "></div>";
+      }
+}
+function answerIsCorrect(){
+    document.getelementById(runningQuestionIndex).style.backgroundcolor = "green";
+}
+function answerIsWrong(){
+    document.getelementById(runningQuestionIndex).style.backgroundcolor = "red";
+}
+
+
+const questionTime = 10;  //10 seconds for every question
+const gaugeWidth = 150;
+let count  =  0;
+const gaugeProgressUnit =gaugeWidth/questionTime;
+
+function counterRender(){
+  if( count <=questionTime ){
+      counter.innerHTML = count;
+      timeGauge.style.width = gaugeProgressUnit * count + "px" ;
+      count++;
+    }else{
+        count = 0;
+        answerisWrong();
+        if( runningQuestionIndex < lastQuestionIndex){
+            runningQuestionIndex++;
+            questionRender();
+          }
+
+
+        }
+
+            //Not done with this function
+
+    }
+
+
+
+
+
+}
   const quizquestions = [  // im trying to get this function to choose a random one and print those quiz questions
                           // but it still needs to get linked to the above array and only thr question
     [0, 1, 2, 3, 4]
