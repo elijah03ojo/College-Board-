@@ -198,17 +198,14 @@ let questions = [
         },
 // can add more later, lets finish the js and get the quiz running
   ]
-let lastQuestionIndex = questions.length-1;   array.length -> 4   array[3] -> d
-let runningQuestionIndex = 0;
-
-function renderQuestion(){                                      runningQuestionIndex = 0;
-    let q = questions[runningQuestionIndex];                    renderQuestion()
-qImg.innerHTML = "<img src=" + q.imgSrc + ">";
-question.innerHTML = "<p>" + q.question + "</p>";               runningQuestionIndex++
-choiceA.innterHTML = q.choiceA;
-choiceB.innterHTML = q.choiceB;
-choiceC.innterHTML = q.choiceC;
-}
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+let count = 0;
+const questionTime = 10; // 10s
+const gaugeWidth = 150; // 150px
+const gaugeUnit = gaugeWidth / questionTime;
+let TIMER;
+let score = 0;
 
 
 function progressRender(){
