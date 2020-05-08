@@ -196,7 +196,7 @@ let questions = [
 // can add more later, lets finish the js and get the quiz running
   ]
 
-  console.log(question[0])
+  console.log(question[0]) // this isn't appearing
   const questions = [  // im trying to get this function to choose a random one and print those quiz questions
                           // but it still needs to get linked to the above array and only thr question
     [0, 1, 2, 3, 4]
@@ -210,8 +210,7 @@ let questions = [
     [15, 11, 12, 10, 14]
     [3, 6, 9, 12, 15]
   // can add more later, lets finish js and get quiz running
-  ]
-
+]
       function display() {
         var displayAnswers[];
         var correctAnswer;
