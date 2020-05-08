@@ -9,10 +9,6 @@ const quiz = document.getElementById("quiz");
 const qImg = document.getElementById("questionImage");
 
 const question = function() {
-let var4 = document.getElementById("question");
-console.log(questions[0, 1, 3, 5 ,6]);
-}
-
 const counter = document.getElementById("counter");
 
 const timeGage = document.getElementById("timeGauge");
@@ -25,6 +21,8 @@ const progress = document.getElementById("progress");
 
 const scoreContainer = document.getElementById("scoreContainer");
 
+
+
 let questions = [
       {
         question : "What company has the stock symbol, AAPL?",
@@ -32,9 +30,8 @@ let questions = [
         choiceA : "Apple",
         choiceB : "Amazon",
         choiceC : "Microsoft",
-        correct : "A"                 //We must make choice A the correct answer <--  why??????????  I was only saying that for the first question...not all of them.//
-      },
-
+        correct : "A"                 //We must make choice A the correct answer
+      };
       {
         question : "What taxes do you pay after gross income?",
         imgSrc  : // "put image here"
@@ -198,6 +195,43 @@ let questions = [
         },
 // can add more later, lets finish the js and get the quiz running
   ]
+
+  console.log(question[0])
+  const questions = [  // im trying to get this function to choose a random one and print those quiz questions
+                          // but it still needs to get linked to the above array and only thr question
+    [0, 1, 2, 3, 4]
+    [9, 10, 11, 12, 13]
+    [5, 6, 7, 8, 9]
+    [18, 17, 16, 15, 14]
+    [0, 18, 1, 17, 2]
+    [5, 8, 13, 16, 1]
+    [1, 5, 9, 13, 14]
+    [16, 0, 7, 4, 2]
+    [15, 11, 12, 10, 14]
+    [3, 6, 9, 12, 15]
+  // can add more later, lets finish js and get quiz running
+  ]
+
+      function display() {
+        var displayAnswers[];
+        var correctAnswer;
+
+          for (var i=0; i<questions.length; i++) {
+            if (i = 0) {
+            /*  var questions1 = [
+                    {
+                      question : "What company has the stock symbol, AAPL?",
+                      imgSrc  : // "put image here"
+                      choiceA : "Apple",
+                      choiceB : "Amazon",
+                      choiceC : "Microsoft",
+                      correct : "A"                 //We must make choice A the correct answer
+                    };                              // do you think this will work/be easier if we make an if and just print them based on the for statement?
+              */
+            }
+          }
+      }
+
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
@@ -213,13 +247,12 @@ function progressRender(){
           progress.innerHTML += "<div class='prog'id=" + qIndex + "></div>";
       }
 }
-function answerIsCorrect(){
+function answerCorrect(){
     document.getelementById(runningQuestionIndex).style.backgroundcolor = "green";
 }
-function answerIsWrong(){
+function answerWrong(){
     document.getelementById(runningQuestionIndex).style.backgroundcolor = "red";
 }
-
 
 const questionTime = 10;  //10 seconds for every question
 const gaugeWidth = 150;
@@ -238,39 +271,8 @@ function counterRender(){
             runningQuestionIndex++;
             questionRender();
           }
-
-
         }
 
             //Not done with this function
 
     }
-
-
-
-
-
-}
-  const quizquestions = [  // im trying to get this function to choose a random one and print those quiz questions
-                          // but it still needs to get linked to the above array and only thr question
-    [0, 1, 2, 3, 4]
-    [9, 10, 11, 12, 13]
-    [5, 6, 7, 8, 9]
-    [18, 17, 16, 15, 14]
-    [0, 18, 1, 17, 2]
-    [5, 8, 13, 16, 1]
-    [1, 5, 9, 13, 14]
-    [16, 0, 7, 4, 2]
-    [15, 11, 12, 10, 14]
-    [3, 6, 9, 12, 15]
-// can add more later, lets finish js and get quiz running
-  ]
-
-  for (let i = 0; i >= 0, i++) {
-    if (i = 0) {
-      var quizzies = quizquestions[0]
-      // something to make them appear on html
-      //
-    }
-
-  }
