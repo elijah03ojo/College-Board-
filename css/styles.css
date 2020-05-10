@@ -2,5 +2,23 @@
   background-color: white;
 }
 
-button {
+#heading {
+  text-align: center;
+  font-weight: underline;
+  font-weight: bold;
+  font-size: 30px;
+  color: red;
+}
+
+#subheading {
+  text-align: center;
+  font-weight: none;
+  font-size: 18px;
+  color: black;
+}
+
+#classicButton {
+  background-color: lightblue;
+  margin-left: 505px;
+  color: red;
 }
