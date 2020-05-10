@@ -3,14 +3,14 @@
 2. Multiple choice 3 options points if right no points if wrong
 3. 25 questions but only 10 appear?
 
-I think this is too complicated. I say just two Features
+I think this is too complicated. I say just two Features (and no image)
 1. Time = Reload page after 5 minutes
 2. Multiple choice 3 options, after submit, tells you how many right/wrong
 */
 
 const quiz = document.getElementById("quiz");
 
-const qImg = document.getElementById("questionImage");
+// const qImg = document.getElementById("questionImage");
 
 const question = function() {
 const counter = document.getElementById("counter");
@@ -29,26 +29,19 @@ const scoreContainer = document.getElementById("scoreContainer");
 
 let questions = [
       {
-        question : "What company has the stock symbol, AAPL?",
-        choiceA : "Apple",
-        choiceB : "Amazon",
-        choiceC : "Microsoft",
-        correct : "A"                 //We must make choice A the correct answer
+        question : "What is FICA tax?",
+        choiceA : "Social Security and Medicare",
+        choiceB : "Federal Income Tax",
+        choiceC : "Federal Income Charge Associaton Tax",
+        correct : "A"
       },
+
       {
         question : "What taxes do you pay after gross income?",
         choiceA : "Citizen Tax",
         choiceB : "Gas Tax",
         choiceC : "FICA",
         correct : "C"
-      },
-
-      {
-        question : "What is FICA tax?",
-        choiceA : "Social Security and Medicare",
-        choiceB : "Federal Income Tax",
-        choiceC : "Federal Income Charge Associaton Tax",
-        correct : "A"
       },
 
       {
@@ -60,42 +53,10 @@ let questions = [
       },
 
       {
-        question : "What is FICA tax?",
-        choiceA : "Social Security and Medicare",
-        choiceB : "Federal Income Tax",
-        choiceC : "Federal Income Charge Associaton Tax",
-        correct : "A"
-      },
-
-      {
         question : "What is economics?",
         choiceA : "The study of decisions that go into making, distributing, and using goods and services",
         choiceB : "The study of economics",
         choiceC : "The study of the world's economies",
-        correct : "A"
-      },
-
-      {
-        question : "What is FICA tax?",
-        choiceA : "Federal Income Charge Association tax",
-        choiceB : "Federal Income Tax",
-        choiceC : "Social Security and Medicare",
-        correct : "C"
-      },
-
-      {
-        question : "What is elastic demand?",
-        choiceA : "When demand for a product is affected by price.",
-        choiceB : "Demand for rubber bands",
-        choiceC : "Demands that is not effected by price",
-        correct : "A"
-      },
-
-      {
-        question : "What is price ceiling?",
-        choiceA : "A maximium price set by the government that can be charged for goods",
-        choiceB : "The highest price possible for products",
-        choiceC : "Raising the price for products till demand decreases",
         correct : "A"
       },
 
@@ -124,14 +85,6 @@ let questions = [
       },
 
       {
-        question : "If a car is worth $50,000, and the car depricates 50% each year, how much will the car be worth after Year 2?",
-        choiceA : "$25,000",
-        choiceB : "$0",
-        choiceC : "$12,500",
-        correct : "A"
-      },
-
- {
       question : "If a car is worth $50,000, and the car depricates the same amount, 5% each year, how much will the car be worth after Year 2?",
       choiceA : "$40,000",
       choiceB : "$25,000",
@@ -163,39 +116,14 @@ let questions = [
       correct : "A"
     },
 
-      {
-        question : "If the assets for a company are $15,000, and the owner's equity are $10,000, how much is the liabilities?",
-        choiceA : "$5,000",
-        choiceB : "$20,000",
-        choiceC : "$35,000",
-        correct : "A"
-      },
-
-        {
-          question : "If the liabilities for a company are $25,000, and the owner's equity is $20,000, how much is the companies assets?",
-          choiceA : "$45,000",
-          choiceB : "$20,000",
-          choiceC : "$15,000",
-          correct : "A"
-        },
-// can add more later, lets finish the js and get the quiz running
+    {
+      question : "If the liabilities for a company are $25,000, and the owner's equity is $20,000, how much is the companies assets?",
+      choiceA : "$45,000",
+      choiceB : "$20,000",
+      choiceC : "$15,000",
+      correct : "A"
+    },
   ]
-
-  console.log(question[0]) // this isn't appearing
-  const questions = [  // im trying to get this function to choose a random one and print those quiz questions
-                          // but it still needs to get linked to the above array and only thr question
-    [0, 1, 2, 3, 4]
-    [9, 10, 11, 12, 13]
-    [5, 6, 7, 8, 9]
-    [18, 17, 16, 15, 14]
-    [0, 18, 1, 17, 2]
-    [5, 8, 13, 16, 1]
-    [1, 5, 9, 13, 14]
-    [16, 0, 7, 4, 2]
-    [15, 11, 12, 10, 14]
-    [3, 6, 9, 12, 15]
-  // can add more later, lets finish js and get quiz running
-]
       function display() {
         var displayAnswers[];
         var correctAnswer;
