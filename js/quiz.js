@@ -168,7 +168,6 @@ function quiz(question, scoreContainer, results, submitButton) {
       }
       scoreContainer.innerHTML = grade.join('');
       }
-      // up to here
 
           function showsAnswers(questions, scoreContainer, results){
               var answerContainers = quizContainer.querySelectorAll('.answers');
@@ -193,3 +192,4 @@ function quiz(question, scoreContainer, results, submitButton) {
           }
 
   }
+  // up to here
