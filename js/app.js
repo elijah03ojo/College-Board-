@@ -1,4 +1,3 @@
 window.onload = function() {
-  alert("You are about to take a quiz.")
-  alert("Please press classic quiz to begin.")
+  alert("You are about to take a quiz. Please press classic quiz to begin.")
 }
