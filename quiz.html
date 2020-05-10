@@ -9,23 +9,23 @@
   </head>
   <body>
     <div id="quiz" style = "display : none;"></div>
-      <div id="qImage"> <img src="smiley.jpg"> </div>
-      <div id="qImage"> <p> Question </p> </div>
+      <div id="qImage"> <p id="heading"> Question </p> </div>
+
         <div id="timer">
-            <div id= "counter"> 6 </div>
+          <!--   <div id= "counter"> 6 </div> -->
             <div id="bitmeGauge"></div>
             <div id="timeGauge"></div>
           </div>
-          <div id="choices">
-            <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
+          <!--   <div id="choices">
+          <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
             <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
             <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
-          </div>
-        <div id="progress"> <div class="prog"></div>
+          </div> -->
+        <div id="progress">
+          <div class="prog"></div>
+        </div>
+      <div id="scoreContainer" style = "display : none;">
       </div>
-      <div id="scoreContainer" style = "display : none;"
-        <img src="smiley.jpg"><p>50%</p>
-      </div>
-      <button>Grade my quiz!</button>
+      <button id="classicButton">Grade my quiz!</button>
     </body>
     </html>
