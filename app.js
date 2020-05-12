@@ -1,12 +1,18 @@
+/* New Features?
+1. Better Point System
+2. Tells you which are wrong
+3. Highest Point Function?
+*/
+
 const readlineSync = require("readline-sync");
-var points = 0
-var score = 0
 
 let name = (readlineSync.question("\nWhat is your name? "));
 let theirName = console.log("\nHi " + name + "!" )
 let firstResponse = (readlineSync.question("\nWould you like to take our business quiz? "));
 firstResponse = firstResponse.toLowerCase();
 while (firstResponse == "yes") {
+  var points = 0
+  var score = 0
   console.log("\nGreat! Let's begin!");
 
 function Q1() {
@@ -101,9 +107,9 @@ if (fourthAnswer == "a" || "b" || "c") {
 
 function Q5() {
   console.log("\nWhat is 50% of 80?\n" );
-  console.log("A: 25%")
-  console.log("B: 50%")
-  console.log("C: 40%")
+  console.log("A: 25")
+  console.log("B: 50")
+  console.log("C: 40")
 }
 Q5()
 var fifthAnswer = (readlineSync.question("Answer: "));
@@ -166,120 +172,120 @@ if (seventhAnswer == "a" || "b" || "c") {
     Q7()
 }
 
+function Q8() {
+  console.log("\nIf a car is worth $50,000, and it depreciates 5% each year, how much will the car be worth after Year 2?\n" );
+  console.log("A: $45,125")
+  console.log("B: $47,625")
+  console.log("C: $45,000")
+}
+Q8()
+var eightAnswer = (readlineSync.question("Answer: "));
+eightAnswer = eightAnswer.toLowerCase();
 
-console.log("\nIf a car is worth $50,000, and the car depricates the same amount, 5% each year, how much will the car be worth after Year 2?\n" );
-console.log("A: $25,000")
-console.log("B: $40,000")
-console.log("C: $45,000")
-let eigthAnswer = (readlineSync.question("Answer: "));
-eigthAnswer = secondAnswer.toUpperCase
-if (eigthAnswer == "A") {
-  points -= 2
-}
-else if (eigthAnswer == "B") {
-  points += 2
-  score++
-}
-else if (eigthAnswer == "C") {
-  points -= 2
-}
-else {
-  points += 0
-}
-
-console.log("\nIf the total tax on a paycheck is 15%, and the person's gross pay is $1,000, what is the person's take-home pay?\n" );
-console.log("A: $850")
-console.log("B: $100")
-console.log("C: $800")
-let ninthAnswer = (readlineSync.question("Answer: "));
-ninthAnswer = secondAnswer.toUpperCase
-if (ninthAnswer == "A") {
-  points += 2
-  score++
-}
-else if (ninthAnswer == "B") {
-  points -= 2
-}
-else if (ninthAnswer == "C") {
-  points -= 2
-}
-else {
-    points += 0
+if (eightAnswer == "a" || "b" || "c") {
+  if (eightAnswer == "a") {
+    score++
+    points += 1
+  } else {
+    points -= 1
   }
-
-console.log("\nIf the assets for a company are $25,000, and the liabilities are $20,000, how much is owner's equity?\n" );
-console.log("A: $45,000")
-console.log("B: $5,750")
-console.log("C: $5,000")
-let tenthAnswer = (readlineSync.question("Answer: "));
-tenthAnswer = tenthAnswer.toUpperCase
-if (tenthAnswer == "A") {
-  points -= 2
-}
-else if (tenthAnswer == "B") {
-  points -= 2
-}
-else if (tenthAnswer == "C") {
-  points += 0
-  score++
-}
-else {
-  points += 0
+} else if (eightAnswer) {
+    console.log("Please enter a valid response.")
+    Q8()
 }
 
 
-let accuracy = (score/14)*100
+function Q9() {
+  console.log("\nIf the total tax on a paycheck is 15%, and the person's gross pay is $1,000, what is the person's take-home pay?\n" );
+  console.log("A: $850")
+  console.log("B: $100")
+  console.log("C: $800")
+}
+Q9()
+var ninthAnswer = (readlineSync.question("Answer: "));
+ninthAnswer = ninthAnswer.toLowerCase();
 
-console.log("\nYou have completed Part 2.")
-console.log("\nYou have earned a score of " + points + " out of 40 possible points.")
-console.log("\nYou got " + score + " out of 14 questions right for an accuracy of " + accuracy + "%.")
-
-firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
-
+if (ninthAnswer == "a" || "b" || "c") {
+  if (ninthAnswer == "a") {
+    score++
+    points += 1
+  } else {
+    points -= 1
+  }
+} else if (ninthAnswer) {
+    console.log("Please enter a valid response.")
+    Q9()
 }
 
+function Q10() {
+  console.log("\nIf the assets for a company are $25,000, and the liabilities are $20,000, how much is owner's equity?\n" );
+  console.log("A: $45,000")
+  console.log("B: $5,750")
+  console.log("C: $5,000")
+}
+Q10()
+var tenthAnswer = (readlineSync.question("Answer: "));
+tenthAnswer = tenthAnswer.toLowerCase();
+
+if (tenthAnswer == "a" || "b" || "c") {
+  if (tenthAnswer == "c") {
+    score++
+    points += 1
+  } else {
+    points -= 1
+  }
+} else if (tenthAnswer) {
+    console.log("Please enter a valid response.")
+    Q10()
+}
 
 // Part 2
 
+console.log("\nPart 2: Written Response\n")
 
-console.log("Part 2: Written Response\n")
+function Q11() {
+  let eleventhAnswer = console.log("\nIf the liabilities for a company are $25,000, and the owner's equity is $20,000, how much is the companies assets?: ");
+}
+Q11()
+var eleventhAnswer = (readlineSync.question("Answer: "));
+eleventhAnswer = eleventhAnswer.toLowerCase();
 
-let firstWrittenAnswer = (readlineSync.question("\nIf the liabilities for a company are $25,000, and the owner's equity is $20,000, how much is the companies assets?: "));
-if (firstWrittenAnswer == "$45,000" || "45 thousand dollars") {
-  points += 10
-  score += 2
-}
-else if (firstWrittenAnswer == "45,000" || "45 thousand" || "fourty five thousand dollars" || "fourty-five thousand dollars") {
-  points += 5
-  score += 1
-}
-else if (firstWrittenAnswer == "$5,000" || "5,000" || "five thousand dollars") {
-  points += 2
-}
-else {
-  points -= 10
-}
-
-let secondWrittenAnswer = (readlineSync.question("\nIf the total tax on a paycheck is 15%, and the person's gross pay is $1,000, how much is the person paying in taxes? "));
-if (secondWrittenAnswer == "$150" || "one hundred fifty dollars" || "150 dollars") {
-  points += 10
-  score += 2
+if (eleventhAnswer == "$15,000" || "45 thousand dollars" || "45,000" || "45 thousand" || "fourty five thousand dollars" || "fourty-five thousand dollars" ||  "$5,000" || "5,000" || "five thousand dollars") {
+  if (eleventhAnswer ==  "$5,000" || "five thousand dollars" ) {
+    score++
+    points += 1
+  } else {
+    points -= 1
+  }
+} else if (eleventhAnswer) {
+    console.log("Please enter a valid response.")
+    Q11()
 }
 
-else if (secondWrittenAnswer == "150" || "one hundred fifty") {
-  points += 5
-  score += 1
+function Q12() {
+  let twelvethAnswer = console.log("\nIf the total tax on a paycheck is 15%, and the person's gross pay is $1,000, how much is the person paying in taxes? ");
 }
+Q12()
+var twelvethAnswer = (readlineSync.question("Answer: "));
+twelvethAnswer = twelvethAnswer.toLowerCase();
 
-else if (secondWrittenAnswer == "$850" || "850" || "eight hundred fifty" || "eight hundred fifty dollars") {
-  points += 2
-}
-else {
-  points -= 10
+if (twelvethAnswer ==  "$150" || "one hundred fifty dollars" || "150 dollars" || "150" || "one hundred fifty" || "$850" || "850" || "eight hundred fifty" || "eight hundred fifty dollars" ) {
+  if (twelvethAnswer == "$150" || "one hundred fifty dollars" || "150 dollars") {
+    score++;
+    points += 1;
+  } else {
+    points -= 1;
+  }
+} else if (twelvethAnswer) {
+    console.log("Please enter a valid response.");
+    Q12();
 }
 
 let accuracy = (score/14)*100
 
-console.log("\nYou have completed Part 2.")
-console.log("\nYou have earned " + points + " out of 40 possible points.")
-console.log("\nYou got " + score + " out of 14 points for an accuracy of " + accuracy + "%.")
+console.log("\nYou have completed the quiz.")
+console.log("\nYou have earned a score of " + points + " out of 14 possible points.")
+console.log("\nYou got " + score + " out of 14 questions right for an accuracy of " + accuracy + "%.")
+
+firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
+}
