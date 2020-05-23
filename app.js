@@ -1,11 +1,10 @@
 /* New Features?
 1. Better Point System
 2. Tells you which are wrong
-3. Highest Point Function?
 */
 
 const readlineSync = require("readline-sync");
-
+let wrong;
 let name = (readlineSync.question("\nWhat is your name? "));
 let theirName = console.log("\nHi " + name + "!" )
 let firstResponse = (readlineSync.question("\nWould you like to take our business quiz? "));
@@ -320,6 +319,15 @@ let accuracy = (score/12)*100
 console.log("\nYou have completed the quiz.")
 console.log("\nYou have earned a score of " + points + " out of 12 possible points.")
 console.log("\nYou got " + score + " out of 12 questions right for an accuracy of " + accuracy + "%.")
+/* not working
+wrongs()
+function wrongs() {
+  if ((wrong == "1") || (wrong == "2") || (wrong == "3") || (wrong == "4") || (wrong == "5") || (wrong == "6") || (wrong == "7") || (wrong == "8") || (wrong == "9")
+  || (wrong == "10") || (wrong == "11") || (wrong == "12")) {
+  console.log("\nYou got problems " + wrong + " wrong")
+}
+}
+*/
 most()
 function most() {
   var old = 0
@@ -330,5 +338,6 @@ function most() {
     console.log("\nHighest Points: " + points)
     points = old = 0
   }
+
 firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
 }
