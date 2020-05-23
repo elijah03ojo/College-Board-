@@ -320,6 +320,15 @@ let accuracy = (score/12)*100
 console.log("\nYou have completed the quiz.")
 console.log("\nYou have earned a score of " + points + " out of 12 possible points.")
 console.log("\nYou got " + score + " out of 12 questions right for an accuracy of " + accuracy + "%.")
-
+most()
+function most() {
+  var old = 0
+  old = points
+  if (points > old) {
+    let points = old
+  }
+    console.log("\nHighest Points: " + points)
+    points = old = 0
+  }
 firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
 }
