@@ -282,48 +282,44 @@ if ((tenthAnswer == "a") || (tenthAnswer == "b") || (tenthAnswer == "c")) {
 console.log("\nPart 2: Written Response\n")
 
 function Q11() {
-  let eleventhAnswer = console.log("\n11. If the liabilities for a company are $25,000, and the owner's equity is $20,000, how much is the companies assets?: ");
+  console.log("\n11. If the liabilities for a company are $25,000, and the owner's equity is $20,000, how much is the companies assets?");
+  eleventhAnswer = (readlineSync.question("Answer: "));
+  eleventhAnswer = eleventhAnswer.toLowerCase();
 }
 Q11()
-var eleventhAnswer = (readlineSync.question("Answer: "));
-eleventhAnswer = eleventhAnswer.toLowerCase();
+P11()
 
-if (eleventhAnswer == "$15,000" || "45 thousand dollars" || "45,000" || "45 thousand" || "fourty five thousand dollars" || "fourty-five thousand dollars" ||  "$5,000" || "5,000" || "five thousand dollars") {
-  if (eleventhAnswer ==  "$5,000" || "five thousand dollars" ) {
+function P11() {
+  if ((eleventhAnswer ==  "$5,000") || (eleventhAnswer == "five thousand dollars") || (eleventhAnswer == "$5000") || (eleventhAnswer == "5 thousand dollars")) {
     score++
     points += 1
   } else {
     points -= 1
   }
-} else if (eleventhAnswer) {
-    console.log("Please enter a valid response.")
-    Q11()
 }
 
 function Q12() {
-  let twelvethAnswer = console.log("\n12. If the total tax on a paycheck is 15%, and the person's gross pay is $1,000, how much is the person paying in taxes? ");
+  console.log("\n12. If the total tax on a paycheck is 15%, and the person's gross pay is $1,000, how much is the person paying in taxes? ");
+  twelvethAnswer = (readlineSync.question("Answer: "));
+  twelvethAnswer = twelvethAnswer.toLowerCase();
 }
 Q12()
-var twelvethAnswer = (readlineSync.question("Answer: "));
-twelvethAnswer = twelvethAnswer.toLowerCase();
+P12()
 
-if (twelvethAnswer ==  "$150" || "one hundred fifty dollars" || "150 dollars" || "150" || "one hundred fifty" || "$850" || "850" || "eight hundred fifty" || "eight hundred fifty dollars" ) {
+function P12(){
   if (twelvethAnswer == "$150" || "one hundred fifty dollars" || "150 dollars") {
     score++;
     points += 1;
   } else {
     points -= 1;
   }
-} else if (twelvethAnswer) {
-    console.log("Please enter a valid response.");
-    Q12();
 }
 
-let accuracy = (score/14)*100
+let accuracy = (score/12)*100
 
 console.log("\nYou have completed the quiz.")
-console.log("\nYou have earned a score of " + points + " out of 14 possible points.")
-console.log("\nYou got " + score + " out of 14 questions right for an accuracy of " + accuracy + "%.")
+console.log("\nYou have earned a score of " + points + " out of 12 possible points.")
+console.log("\nYou got " + score + " out of 12 questions right for an accuracy of " + accuracy + "%.")
 
 firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
 }
