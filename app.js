@@ -25,18 +25,22 @@ while (firstResponse == "yes") {
     firstAnswer = firstAnswer.toLowerCase();
   }
   Q1()
+  P1()
 
-  if ((firstAnswer == "a") || (firstAnswer == "b") || (firstAnswer == "c")) {
-    if (firstAnswer == "a") {
-      score++
-      points += 1
-    } else {
-      points -= 1
+  function P1() {
+    if ((firstAnswer == "a") || (firstAnswer == "b") || (firstAnswer == "c")) {
+      if (firstAnswer == "a") {
+        score++
+        points += 1
+      } else {
+        points -= 1
+      }
+    } else{
+        console.log("\nPlease enter a valid response.")
+        Q1()
+        P1()
     }
-  } else{
-      console.log("\nPlease enter a valid response.")
-      Q1()
-  }
+}
 
 function Q2() {
   console.log("\n2. What taxes do you pay after gross income?\n" );
@@ -47,8 +51,9 @@ function Q2() {
   secondAnswer = secondAnswer.toLowerCase();
 }
 Q2()
+P2()
 
-
+function P2() {
 if ((secondAnswer == "a") || (secondAnswer == "b") || (secondAnswer == "c")) {
   if (secondAnswer == "b") {
     score++
@@ -59,6 +64,8 @@ if ((secondAnswer == "a") || (secondAnswer == "b") || (secondAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q2()
+    P2()
+}
 }
 
 function Q3() {
@@ -70,7 +77,8 @@ function Q3() {
   thirdAnswer = thirdAnswer.toLowerCase();
 }
 Q3()
-
+P3()
+function P3() {
 if ((thirdAnswer == "a") || (thirdAnswer == "b") || (thirdAnswer == "c")) {
   if (thirdAnswer == "b") {
     score++
@@ -81,6 +89,8 @@ if ((thirdAnswer == "a") || (thirdAnswer == "b") || (thirdAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q3()
+    P3()
+}
 }
 
 
@@ -93,7 +103,9 @@ function Q4() {
   fourthAnswer = fourthAnswer.toLowerCase();
 }
 Q4()
+P4()
 
+function P4() {
 if ((fourthAnswer == "a") || (fourthAnswer == "b") || (fourthAnswer == "c")) {
   if (fourthAnswer == "a") {
     score++
@@ -104,6 +116,8 @@ if ((fourthAnswer == "a") || (fourthAnswer == "b") || (fourthAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q4()
+    P4()
+}
 }
 
 function Q5() {
@@ -115,8 +129,9 @@ function Q5() {
   fifthAnswer = fifthAnswer.toLowerCase();
 }
 Q5()
+P5()
 
-
+function P5() {
 if ((fifthAnswer == "a") || (fifthAnswer == "b") || (fifthAnswer == "c")) {
   if (fifthAnswer == "c") {
     score++
@@ -127,6 +142,8 @@ if ((fifthAnswer == "a") || (fifthAnswer == "b") || (fifthAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q5()
+    P5()
+}
 }
 
 
@@ -139,8 +156,9 @@ function Q6() {
   sixthAnswer = sixthAnswer.toLowerCase();
 }
 Q6()
+P6()
 
-
+function P6() {
 if ((sixthAnswer == "a") || (sixthAnswer == "b") || (sixthAnswer == "c")) {
   if (sixthAnswer == "c") {
     score++
@@ -151,6 +169,8 @@ if ((sixthAnswer == "a") || (sixthAnswer == "b") || (sixthAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q6()
+    P6()
+}
 }
 
 function Q7() {
@@ -162,8 +182,9 @@ function Q7() {
   seventhAnswer = seventhAnswer.toLowerCase();
 }
 Q7()
+P7()
 
-
+function P7() {
 if ((seventhAnswer == "a") || (seventhAnswer == "b") || (seventhAnswer == "c")) {
   if (seventhAnswer == "a") {
     score++
@@ -174,6 +195,8 @@ if ((seventhAnswer == "a") || (seventhAnswer == "b") || (seventhAnswer == "c")) 
 } else {
     console.log("\nPlease enter a valid response.")
     Q7()
+    P7()
+}
 }
 
 function Q8() {
@@ -185,8 +208,9 @@ function Q8() {
   eightAnswer = eightAnswer.toLowerCase();
 }
 Q8()
+P8()
 
-
+function P8() {
 if ((eightAnswer == "a") || (eightAnswer == "b") || (eightAnswer == "c")) {
   if (eightAnswer == "a") {
     score++
@@ -197,6 +221,8 @@ if ((eightAnswer == "a") || (eightAnswer == "b") || (eightAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q8()
+    P8()
+}
 }
 
 function Q9() {
@@ -208,8 +234,9 @@ function Q9() {
   ninthAnswer = ninthAnswer.toLowerCase();
 }
 Q9()
+P9()
 
-
+function P9() {
 if ((ninthAnswer == "a") || (ninthAnswer == "b") || (ninthAnswer == "c")) {
   if (ninthAnswer == "a") {
     score++
@@ -220,6 +247,8 @@ if ((ninthAnswer == "a") || (ninthAnswer == "b") || (ninthAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q9()
+    P9()
+}
 }
 
 function Q10() {
@@ -231,7 +260,9 @@ function Q10() {
   tenthAnswer = tenthAnswer.toLowerCase();
 }
 Q10()
+P10()
 
+function P10() {
 if ((tenthAnswer == "a") || (tenthAnswer == "b") || (tenthAnswer == "c")) {
   if (tenthAnswer == "c") {
     score++
@@ -242,6 +273,8 @@ if ((tenthAnswer == "a") || (tenthAnswer == "b") || (tenthAnswer == "c")) {
 } else {
     console.log("\nPlease enter a valid response.")
     Q10()
+    P10()
+}
 }
 
 // Part 2
