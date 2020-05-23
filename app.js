@@ -33,6 +33,7 @@ while (firstResponse == "yes") {
         points += 1
       } else {
         points -= 1
+        wrong = "1"
       }
     } else{
         console.log("\nPlease enter a valid response.")
@@ -59,6 +60,7 @@ if ((secondAnswer == "a") || (secondAnswer == "b") || (secondAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "2"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -84,6 +86,7 @@ if ((thirdAnswer == "a") || (thirdAnswer == "b") || (thirdAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "3"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -111,6 +114,7 @@ if ((fourthAnswer == "a") || (fourthAnswer == "b") || (fourthAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "4"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -137,6 +141,7 @@ if ((fifthAnswer == "a") || (fifthAnswer == "b") || (fifthAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "5"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -164,6 +169,7 @@ if ((sixthAnswer == "a") || (sixthAnswer == "b") || (sixthAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "6"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -190,6 +196,7 @@ if ((seventhAnswer == "a") || (seventhAnswer == "b") || (seventhAnswer == "c")) 
     points += 1
   } else {
     points -= 1
+    wrong += "7"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -216,6 +223,7 @@ if ((eightAnswer == "a") || (eightAnswer == "b") || (eightAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "8"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -242,6 +250,7 @@ if ((ninthAnswer == "a") || (ninthAnswer == "b") || (ninthAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "9"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -268,6 +277,7 @@ if ((tenthAnswer == "a") || (tenthAnswer == "b") || (tenthAnswer == "c")) {
     points += 1
   } else {
     points -= 1
+    wrong += "10"
   }
 } else {
     console.log("\nPlease enter a valid response.")
@@ -294,6 +304,7 @@ function P11() {
     points += 1
   } else {
     points -= 1
+    wrong += "11"
   }
 }
 
@@ -311,6 +322,7 @@ function P12(){
     points += 1;
   } else {
     points -= 1;
+    wrong += "12"
   }
 }
 
@@ -319,7 +331,7 @@ let accuracy = (score/12)*100
 console.log("\nYou have completed the quiz.")
 console.log("\nYou have earned a score of " + points + " out of 12 possible points.")
 console.log("\nYou got " + score + " out of 12 questions right for an accuracy of " + accuracy + "%.")
-/* not working
+
 wrongs()
 function wrongs() {
   if ((wrong == "1") || (wrong == "2") || (wrong == "3") || (wrong == "4") || (wrong == "5") || (wrong == "6") || (wrong == "7") || (wrong == "8") || (wrong == "9")
@@ -327,7 +339,7 @@ function wrongs() {
   console.log("\nYou got problems " + wrong + " wrong")
 }
 }
-*/
+
 most()
 function most() {
   var old = 0
