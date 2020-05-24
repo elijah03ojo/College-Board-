@@ -1,7 +1,5 @@
-/* New Features?
-1. Better Point System
-2. Tells you which are wrong
-*/
+// New Features
+// 1. Tells you which are wrong
 
 const readlineSync = require("readline-sync");
 let name = (readlineSync.question("\nWhat is your name? "));
@@ -329,6 +327,5 @@ function most() {
     console.log("\nHighest Points: " + points)
     points = old = 0
   }
-
 firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
 }
