@@ -1,11 +1,10 @@
-// New Features
-// 1. Tells you which are wrong
-
 const readlineSync = require("readline-sync");
 let name = (readlineSync.question("\nWhat is your name? "));
 let theirName = console.log("\nHi " + name + "!" )
 let firstResponse = (readlineSync.question("\nWould you like to take our business quiz? "));
 firstResponse = firstResponse.toLowerCase();
+var old = -12;
+
 while (firstResponse == "yes") {
   firstResponse = firstResponse.toLowerCase();
   var points = 0
@@ -317,15 +316,17 @@ console.log("\nYou have completed the quiz.")
 console.log("\nYou have earned a score of " + points + " out of 12 possible points.")
 console.log("\nYou got " + score + " out of 12 questions right for an accuracy of " + accuracy + "%.")
 
+
 most()
 function most() {
-  var old = 0
-  old = points
   if (points > old) {
-    let points = old
+    old = points;
   }
-    console.log("\nHighest Points: " + points)
-    points = old = 0
+  else if (points < old) {
+    points = old
   }
+  console.log("\nHighest Points: " + points)
+}
+
 firstResponse = (readlineSync.question("\nWould you like to retake our business quiz? "));
 }
